@@ -3,7 +3,8 @@ import dash_core_components as dcc
 import dash_html_components as html
 
 app = dash.Dash()
-application = app.server
+
+server = app.server
 
 app.layout = html.Div(children=[
     html.H1(children='Hello Dash'),
@@ -27,4 +28,4 @@ app.layout = html.Div(children=[
 ])
 
 if __name__ == '__main__':
-    application.run(debug=True, host='0.0.0.0', port='80')
+    app.run(debug=True, host='0.0.0.0', port='80')
